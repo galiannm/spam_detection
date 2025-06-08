@@ -1,0 +1,24 @@
+.home-container {
+    background: #1f2f45;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .nav-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .btn {
+    background: #4f6fad;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,40 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.one-email-container {
+  background-color: #1f2f45;
+  color: #ffffff;
+  width: 90%;
+  max-width: 900px;              
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.stack-predict {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.email-input {
+  background-color: transparent;
+  border: 1px solid #c7cee1;
+  border-radius: 10px;
+  color: #c7cee1;
+}
+
+.check-btn {
+  color: #1f2f45;
+  cursor: pointer;
+}
+
+.response{
+  color: #ffffff;
+}
+  
+  

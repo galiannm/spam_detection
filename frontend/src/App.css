@@ -1,34 +1,6 @@
-#root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
 }
-
-.container {
-  background-color: #1f2f45;
-  color: #ffffff;
-  width: 90%;
-  max-width: 900px;              
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-}
-
-.stack-predict {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-}
-
-.email-input {
-  background-color: transparent;
-  border: 1px solid aliceblue;
-  border-radius: 10px;
-  color: aliceblue;
-}
-
-.check-btn {
-  color: #1f2f45;
-}
-
