@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./home";
-import OneEmail from "./one_email";
-import ListEmail from "./list_email";
+import Home from "./pages/home";
+import OneEmail from "./pages/one_email";
+import ListEmail from "./pages/list_email";
 import "./App.css";
 
 export default function App() {
