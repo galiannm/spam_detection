@@ -4,6 +4,19 @@
   text-align: center;
 }
 
+button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+button:disabled:hover {
+  background-color: inherit;  
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  color: inherit;
+}
+
 .one-email-container {
   position: relative; 
   background-color: #1f2f45;
@@ -23,10 +36,18 @@
 }
 
 .email-input {
-  background-color: transparent;
   border: 1px solid #c7cee1;
   border-radius: 10px;
+  padding: 0.2rem;
+  background-color: transparent;
   color: #c7cee1;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #c7cee1;
+  box-shadow: 0 0 0 1px #c7cee1;
 }
 
 .check-btn {
@@ -45,6 +66,37 @@
   color: #ffffff;
 }
 
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.feedback {
+  background: none;
+  color: #c7cee1;
+  font-size: 20px;
+}
+
+.feedback:hover {
+  box-shadow: none;
+}
+
+.feedback-correct:hover {
+  color: #00FF00;
+}
+.feedback-correct.active {
+  color: #00FF00;
+}
+
+.feedback-wrong:hover {
+  color: #ff0000;
+}
+.feedback-wrong.active {
+  color: #ff0000;
+}
+
 .home-btn {
   position: absolute;
   bottom: 0.7rem;            
@@ -61,6 +113,10 @@
   transition: all 0.1s;
   transform: translateX(-50%) translateY(-3px);
   box-shadow: 0px 3px 6px rgba(230, 230, 230, 0.1);
+}
+
+.feedback-toast {
+  color: #1f2f45;
 }
   
   

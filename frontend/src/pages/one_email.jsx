@@ -1,12 +1,25 @@
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
+import {PiThumbsDownFill, PiThumbsUpFill} from "react-icons/pi";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./styles/one_email.css";
 
 export default function OneEmail() {
-  const [text, setText]     = useState("");
+  const [text, setText] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState(null);
+
+  const handleFeedback = () => {
+    toast("Thank you for your feedback!", {
+      className: "feedback-toast",
+      type: "success",
+      autoClose: 2000, 
+      position: "top-left"
+    });
+  };  
 
   const checkSpam = async () => {
     if (!text.trim()) return;
@@ -42,7 +55,10 @@ export default function OneEmail() {
         />
         <button
           className="check-btn"
-          onClick={checkSpam}
+          onClick={() => {
+            checkSpam();
+            setFeedback("");
+          }}
           disabled={loading}
         >
           {loading ? "Checking…" : "Check"}
@@ -50,12 +66,35 @@ export default function OneEmail() {
       </div>
       <div className="response">
         {result && (
-          <p className={`result ${result}`}>This email is: {result.toUpperCase()}</p>
+          <>
+            <p className={`result ${result}`}>This email is: {result.toUpperCase()}</p>
+            <div className="feedback-container">
+              <button 
+                className={`feedback feedback-correct${feedback === "correct" ? " active" : ""}`}
+                onClick={() => {
+                  setFeedback("correct");
+                  handleFeedback();
+                }}
+                disabled={feedback !== null}
+              > <PiThumbsUpFill /> </button>
+              <button 
+                className={`feedback feedback-wrong${feedback === "wrong" ? " active" : ""}`}
+                onClick={() => {
+                  setFeedback("wrong");
+                  handleFeedback();
+                }}
+                disabled={feedback !== null}
+              > 
+                <PiThumbsDownFill /> </button>
+            </div>
+          </>
         )}
       </div>
       <Link to="/" className="home-btn">
         <FaHome size={20} /> 
       </Link>
+
+      <ToastContainer />
     </div>
   );
 }
