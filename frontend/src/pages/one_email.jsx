@@ -12,13 +12,27 @@ export default function OneEmail() {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null);
 
-  const handleFeedback = () => {
+  const handleFeedback = async () => {
     toast("Thank you for your feedback!", {
       className: "feedback-toast",
       type: "success",
       autoClose: 2000, 
       position: "top-left"
     });
+
+    try {
+      await fetch("http://localhost:8000/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text,
+          prediction: result,
+          feedback: userFeedback, // "correct" or "wrong"
+        }),
+      });
+    } catch (error) {
+      console.error("Failed to send feedback:", error);
+    }
   };  
 
   const checkSpam = async () => {
