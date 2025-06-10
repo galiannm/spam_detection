@@ -75,7 +75,7 @@ export default function OneEmail() {
                   setFeedback("correct");
                   handleFeedback();
                 }}
-                disabled={feedback !== null}
+                disabled={feedback !== ""}
               > <PiThumbsUpFill /> </button>
               <button 
                 className={`feedback feedback-wrong${feedback === "wrong" ? " active" : ""}`}
@@ -83,7 +83,7 @@ export default function OneEmail() {
                   setFeedback("wrong");
                   handleFeedback();
                 }}
-                disabled={feedback !== null}
+                disabled={feedback !== ""}
               > 
                 <PiThumbsDownFill /> </button>
             </div>
