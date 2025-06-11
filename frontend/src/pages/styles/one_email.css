@@ -21,9 +21,9 @@ button:disabled:hover {
   position: relative; 
   background-color: #1f2f45;
   color: #ffffff;
-  width: 90%;
+  width: 95%;
   max-width: 900px;              
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
@@ -38,7 +38,9 @@ button:disabled:hover {
 .email-input {
   border: 1px solid #c7cee1;
   border-radius: 10px;
-  padding: 0.2rem;
+  height: 100px;
+  width: 300px;
+  padding: 0.5rem;
   background-color: transparent;
   color: #c7cee1;
   transition: border 0.2s ease, box-shadow 0.2s ease;
