@@ -1,0 +1,31 @@
+.home-container {
+  background: #1f2f45;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+.nav-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  background: #4f6fad;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 0.1s;
+  transform: translateY(-3px);
+  box-shadow: 0px 3px 6px rgba(230, 230, 230, 0.1);
+}

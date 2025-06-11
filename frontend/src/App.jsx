@@ -1,57 +1,16 @@
-// frontend/src/App.jsx
-import { useState } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import OneEmail from "./pages/one_email";
+import ListEmail from "./pages/list_email";
 import "./App.css";
 
-function App() {
-  const [text, setText] = useState("");
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const checkSpam = async () => {
-    if (!text.trim()) return;
-    setLoading(true);
-    try {
-      const res = await fetch("http://localhost:8000/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ text }),
-      });
-      const data = await res.json();
-      setResult(data.prediction);
-    } catch (err) {
-      console.error("Error:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+export default function App() {
   return (
-    <div className="container">
-      <h1>Spam Detection Tool</h1>
-      <div className="stack-predict">
-        <textarea
-          className="email-input"
-          placeholder="Paste your email here..."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <button 
-          className="check-btn"
-          onClick={checkSpam} 
-          disabled={loading}
-        >
-          {loading ? "Checking..." : "Check"}
-        </button>
-        <div className="response">
-          {result && (
-            <p className={`result ${result}`}>This email is: {result.toUpperCase()}</p>
-          )}
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/"       element={<Home     />} />
+      <Route path="/email"  element={<OneEmail />} />
+      <Route path="/file"   element={<ListEmail/>} />
+    </Routes>
   );
 }
-
-export default App;

@@ -1,0 +1,122 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+button:disabled:hover {
+  background-color: inherit;  
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  color: inherit;
+}
+
+.one-email-container {
+  position: relative; 
+  background-color: #1f2f45;
+  color: #ffffff;
+  width: 90%;
+  max-width: 900px;              
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.stack-predict {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.email-input {
+  border: 1px solid #c7cee1;
+  border-radius: 10px;
+  padding: 0.2rem;
+  background-color: transparent;
+  color: #c7cee1;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #c7cee1;
+  box-shadow: 0 0 0 1px #c7cee1;
+}
+
+.check-btn {
+  color: #1f2f45;
+  cursor: pointer;
+}
+
+.check-btn:hover {
+  box-shadow: #1f2f45;
+  transition: all 0.1s;
+  transform: translateY(-3px);
+  box-shadow: 0px 3px 6px rgba(230, 230, 230, 0.1);
+}
+
+.response{
+  color: #ffffff;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.feedback {
+  background: none;
+  color: #c7cee1;
+  font-size: 20px;
+}
+
+.feedback:hover {
+  box-shadow: none;
+}
+
+.feedback-correct:hover {
+  color: #00FF00;
+}
+.feedback-correct.active {
+  color: #00FF00;
+}
+
+.feedback-wrong:hover {
+  color: #ff0000;
+}
+.feedback-wrong.active {
+  color: #ff0000;
+}
+
+.home-btn {
+  position: absolute;
+  bottom: 0.7rem;            
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  color: white;
+  text-decoration: none;
+}
+
+.home-btn:hover {
+  transition: all 0.1s;
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0px 3px 6px rgba(230, 230, 230, 0.1);
+}
+
+.feedback-toast {
+  color: #1f2f45;
+}
+  
+  

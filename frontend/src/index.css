@@ -10,7 +10,7 @@ body {
   display: flex;                  /* enable flexbox */
   align-items: center;            /* vertical centering */
   justify-content: center;        /* horizontal centering */
-  background: aliceblue;
+  background: #c7cee1;
 }
 
 
