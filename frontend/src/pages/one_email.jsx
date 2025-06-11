@@ -27,7 +27,7 @@ export default function OneEmail() {
         body: JSON.stringify({
           text,
           prediction: result,
-          feedback: userFeedback, // "correct" or "wrong"
+          feedback: feedback, // "correct" or "wrong"
         }),
       });
     } catch (error) {

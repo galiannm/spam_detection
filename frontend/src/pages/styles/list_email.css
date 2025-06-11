@@ -1,7 +1,7 @@
 .file-email-container {
-  position: relative;      /* ← new */
+  position: relative;     
   padding: 2rem;
-  padding-bottom: 4rem;    /* give room for the button */
+  padding-bottom: 4rem;   
   border-radius: 1rem;
   background: #1f2f45;
   color: white;
